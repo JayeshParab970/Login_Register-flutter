@@ -44,6 +44,7 @@ class _MyRegisterState extends State<MyRegister> {
                                 borderRadius: BorderRadius.circular(10),
                                 borderSide: BorderSide(color: Colors.white)),
                             hintText: 'Name',
+                            prefixIcon: Icon(Icons.abc,color: Colors.white),
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10))),
@@ -60,6 +61,7 @@ class _MyRegisterState extends State<MyRegister> {
                                 borderRadius: BorderRadius.circular(10),
                                 borderSide: BorderSide(color: Colors.white)),
                             hintText: 'Email',
+                            prefixIcon: Icon(Icons.email,color: Colors.white),
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10))),
@@ -77,6 +79,7 @@ class _MyRegisterState extends State<MyRegister> {
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide: BorderSide(color: Colors.white)),
                               hintText: 'Password',
+                              prefixIcon: Icon(Icons.password,color: Colors.white),
                               hintStyle: TextStyle(color: Colors.white),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)))

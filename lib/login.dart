@@ -36,6 +36,7 @@ class _MyLoginState extends State<MyLogin> {
                       decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         hintText: 'Email',
+                        prefixIcon: Icon(Icons.email,color: Colors.lightBlueAccent),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
                     ),
@@ -47,6 +48,7 @@ class _MyLoginState extends State<MyLogin> {
                         decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         hintText: 'Password',
+                            prefixIcon: Icon(Icons.password,color: Colors.lightBlueAccent),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)))
                     ),
@@ -55,31 +57,32 @@ class _MyLoginState extends State<MyLogin> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children:[
-                        Text('Sign In',
+                        children:[
+                          Text('Sign In',
                           style: TextStyle(
                             color: Color(0xff4c505b),
-                              fontSize: 27,fontWeight: FontWeight.w700),
+                              fontSize: 27,fontWeight: FontWeight.w700)
                         ),
-                        CircleAvatar(
-                          radius:30,
-                          backgroundColor: Color(0xff4c505b),
-                          child: IconButton(
-                            color: Colors.white,
-                            onPressed: (){},
-                            icon: Icon(Icons.arrow_forward),
-                          ),
-                        )
-                      ]
+
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Color(0xff4c505b),
+                            child: IconButton(
+                              color:Colors.white,
+                              onPressed: () {Navigator.pushNamed(context, 'welcome');},
+                              icon: Icon(Icons.arrow_forward),
+                            )
+                          )
+    ],
                     ),
                     SizedBox(
                       height: 40,
                     ),
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextButton(onPressed: (){
-                          Navigator.pushNamed(context, 'register');
+                        TextButton(onPressed: (){Navigator.pushNamed(context, 'register');
                         }, child: Text('Sign Up',
                             style:TextStyle(
                               decoration: TextDecoration.underline,
@@ -87,21 +90,25 @@ class _MyLoginState extends State<MyLogin> {
                               color: Color(0xff4c505b),
                             ))
                         ),
-
+                        SizedBox(
+                          height: 40,
+                        ),
                         TextButton(onPressed: (){}, child: Text('Forgot Password',
                             style:TextStyle(
                               decoration: TextDecoration.underline,
                               fontSize: 20,
                               color: Color(0xff4c505b),
                             ))
-                        )
+                        ),
+
                       ],
 
                     )
                   ],
-                )
-              ),
-            )
+                    )
+              )
+                ),
+
           ],
         ),
       ),
