@@ -15,18 +15,23 @@ class _WelcomePageState extends State<WelcomePage> {
             image: DecorationImage(
                 image: AssetImage('assets/login.png'), fit: BoxFit.cover)),
         child: Scaffold(
+            appBar: AppBar(
+              title: Text('Back To Login Page'),
+              backgroundColor: Colors.transparent,
+            ),
             backgroundColor: Colors.transparent,
-            body: Stack(
+            body: Center(
+              child: Column(
+                mainAxisSize:MainAxisSize.min ,
                 children: [
                   Container(
-                    padding: EdgeInsets.only(left: 35, top: 130),
-                    child: Text('Welcome\nBack',
-                      style: TextStyle(color: Colors.white, fontSize: 40),
+                    child: Text('Home Page',
+                      style: TextStyle(color: Colors.black, fontSize: 40,fontWeight: FontWeight.w700),
                     ),
                   )
                 ]
             )
         )
-    );
+    ));
   }
 }

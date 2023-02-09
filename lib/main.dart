@@ -1,3 +1,4 @@
+import 'package:first_project/Password.dart';
 import 'package:first_project/login.dart';
 import 'package:first_project/register.dart';
 import 'package:first_project/welcome.dart';
@@ -10,7 +11,8 @@ void main() {
     routes: {
       'login': (context)=> MyLogin(),
       'register':(context)=>MyRegister(),
-      'welcome':(context)=> WelcomePage()
+      'welcome':(context)=> WelcomePage(),
+      'password':(context)=> Password()
     },
   ));
 }

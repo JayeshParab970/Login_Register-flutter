@@ -93,7 +93,7 @@ class _MyLoginState extends State<MyLogin> {
                         SizedBox(
                           height: 40,
                         ),
-                        TextButton(onPressed: (){}, child: Text('Forgot Password',
+                        TextButton(onPressed: (){Navigator.pushNamed(context, 'password');}, child: Text('Forgot Password',
                             style:TextStyle(
                               decoration: TextDecoration.underline,
                               fontSize: 20,

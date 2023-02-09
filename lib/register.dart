@@ -90,7 +90,7 @@ class _MyRegisterState extends State<MyRegister> {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children:[
-                            Text('Sign In',
+                            Text('Sign Up',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 27,fontWeight: FontWeight.w700),
@@ -100,7 +100,7 @@ class _MyRegisterState extends State<MyRegister> {
                               backgroundColor: Colors.black,
                               child: IconButton(
                                 color: Colors.white,
-                                onPressed: (){},
+                                onPressed: (){Navigator.pushNamed(context, 'welcome');},
                                 icon: Icon(Icons.arrow_forward),
                               ),
                             )
@@ -109,27 +109,12 @@ class _MyRegisterState extends State<MyRegister> {
                       SizedBox(
                         height: 40,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          TextButton(onPressed: (){
-                            Navigator.pushNamed(context, 'login');
-                          }, child: Text('Sign Up',
-                              style:TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 20,
-                                color: Colors.white,
-                              ))
-                          ),
 
-
-                        ],
+                    ],
 
                       )
-                    ],
                   )
               ),
-            )
           ],
         ),
       ),
