@@ -9,6 +9,7 @@ class MyLogin extends StatefulWidget {
 }
 
 class _MyLoginState extends State<MyLogin> {
+  bool hide=true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,11 +45,16 @@ class _MyLoginState extends State<MyLogin> {
                       height: 30,
                     ),
                     TextField(
-                      obscureText: true,
+                      obscureText: hide,
                         decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         hintText: 'Password',
                             prefixIcon: Icon(Icons.password,color: Colors.lightBlueAccent),
+                            suffixIcon:IconButton(onPressed:(){setState(() {
+                              hide= !hide;
+                            });
+
+                            },icon:hide? Icon(Icons.visibility_off):Icon(Icons.visibility),),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)))
                     ),
