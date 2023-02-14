@@ -8,6 +8,7 @@ class MyRegister extends StatefulWidget {
 }
 
 class _MyRegisterState extends State<MyRegister> {
+  bool hide=true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -70,7 +71,7 @@ class _MyRegisterState extends State<MyRegister> {
                         height: 30,
                       ),
                       TextField(
-                          obscureText: true,
+                          obscureText: hide,
                           decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
@@ -80,7 +81,12 @@ class _MyRegisterState extends State<MyRegister> {
                                   borderSide: BorderSide(color: Colors.white)),
                                   hintText: 'Password',
                                   prefixIcon: Icon(Icons.password,color: Colors.white),
-                                  hintStyle: TextStyle(color: Colors.white),
+                                  suffixIcon:IconButton(onPressed:(){setState(() {
+                                  hide= !hide;
+                                    });
+
+                                  },icon:hide? Icon(Icons.visibility_off):Icon(Icons.visibility),),
+                                    hintStyle: TextStyle(color: Colors.white),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)))
                       ),
