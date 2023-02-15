@@ -25,7 +25,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 mainAxisSize:MainAxisSize.min ,
                 children: [
                   Container(
-                    child: Text('Home Page',
+                    child: Text('Home',
                       style: TextStyle(color: Colors.black, fontSize: 40,fontWeight: FontWeight.w700),
                     ),
                   )
