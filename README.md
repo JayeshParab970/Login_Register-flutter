@@ -6,7 +6,7 @@ A new Flutter project.
 
 This Flutter Project generally contains a basic login and register page . 
 
-#Requirements:-
+# Requirements:-
 
 Android Studio (latest version)
 
