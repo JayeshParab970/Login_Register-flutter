@@ -26,7 +26,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 children: [
                   Container(
                     child: Text('Home',
-                      style: TextStyle(color: Colors.black, fontSize: 40,fontWeight: FontWeight.w700),
+                      style: TextStyle(color: Colors.indigo, fontSize: 40,fontWeight: FontWeight.w700),
                     ),
                   )
                 ]
